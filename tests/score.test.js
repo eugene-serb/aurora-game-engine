@@ -5,8 +5,6 @@ import Score from '../src/score.js';
 describe('[Class][Score] create instance without params', () => {
   const score = new Score();
 
-  console.log(typeof score.value);
-
   test('Object is being created', () => {
     expect(score).not.toBeNull();
   });
