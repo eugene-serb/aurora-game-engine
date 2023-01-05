@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 import Gameloop from '../src/index.js';
 
