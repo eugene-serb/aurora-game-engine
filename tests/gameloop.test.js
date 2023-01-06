@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-import Gameloop from '../src/index.js';
+import Gameloop from '../src/gameloop.js';
 
 describe('[Class][Gameloop] create instance', () => {
   const params = {
