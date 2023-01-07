@@ -1,6 +1,6 @@
 {
   "name": "game-engine",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Game engine for creating 1D and 2D games in JavaScript",
   "keywords": [
     "game-engine"

@@ -5,7 +5,7 @@ export class Drawer {
     if (!container || !matrix) {
       this.error = 'Error on construct';
       return this;
-    };
+    }
 
     this.$container = container;
     this.matrix = matrix;
@@ -18,7 +18,7 @@ export class Drawer {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
     for (let column = 0; column < this.matrix.length; this.matrix.length++) {
-      for (let row = 0; y < this.matrix[column].length; row++) {
+      for (let row = 0; row < this.matrix[column].length; row++) {
         this.context.fillStyle = this.matrix[column][row].color[this.theme];
         this.context.fillRect(
           column * this.cellWidth,
