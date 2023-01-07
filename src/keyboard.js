@@ -1,8 +1,7 @@
 ﻿'use strict';
 
 export class Keyboard {
-  constructor(target, context) {
-    this._target = target;
+  constructor(context) {
     this._context = context;
     this.#handle();
   }
