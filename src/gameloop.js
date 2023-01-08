@@ -10,10 +10,12 @@ export class Gameloop {
       this.clear();
     }
     this.isPaused = false;
+    this.canMove = true;
   }
 
   stop() {
     this.isPaused = true;
+    this.canMove = false;
     clearTimeout(this.interval);
   }
 
@@ -31,6 +33,7 @@ export class Gameloop {
     this.interval = null;
     this.isGameOver = false;
     this.isPaused = false;
+    this.canMove = true;
   }
 }
 
