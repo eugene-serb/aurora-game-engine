@@ -15,7 +15,7 @@ export class Gamepad {
     this.KEYPRESS_INTERRUPT = 100;
 
     this._gamepadInterval = null;
-    this._keypressInterval = null;
+    this._keypressCooldown = 0;
 
     this.#connectGamepad();
   }
@@ -23,7 +23,7 @@ export class Gamepad {
   #connectGamepad() {
     window.addEventListener('gamepadconnected', () => {
       const update = () => {
-        this._keypressInterval += this.LISTENER_INTERRUPT;
+        this._keypressCooldown += this.LISTENER_INTERRUPT;
 
         const [gamepad] = navigator.getGamepads();
 
@@ -44,26 +44,27 @@ export class Gamepad {
         }
       };
 
-      setInterval(update, this.LISTENER_INTERRUPT);
+      this._gamepadInterval = setInterval(update, this.LISTENER_INTERRUPT);
     });
   }
 
   #handle(button) {
-    if (this._keypressInterval >= this.KEYPRESS_INTERRUPT) {
+    if (this._keypressCooldown >= this.KEYPRESS_INTERRUPT) {
       if (button === 2) {
         if (this._context.isPaused) {
           this._context.start();
-          this._keypressInterval = 0;
+          this._keypressCooldown = 0;
         } else {
           this._context.stop();
-          this._keypressInterval = 0;
+          this._keypressCooldown = 0;
         }
       }
 
       if (button === 3) {
+        clearInterval(this._gamepadInterval);
         this._context.clear();
         this._context.start();
-        this._keypressInterval = 0;
+        this._keypressCooldown = 0;
       }
     }
   }
