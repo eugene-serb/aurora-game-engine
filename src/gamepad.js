@@ -12,7 +12,7 @@ export class Gamepad {
     }
 
     this.LISTENER_INTERRUPT = 10;
-    this.KEYPRESS_INTERRUPT = 100;
+    this.KEYPRESS_INTERRUPT = 250;
 
     this._gamepadInterval = null;
     this._keypressCooldown = 0;
@@ -50,7 +50,7 @@ export class Gamepad {
 
   #handle(button) {
     if (this._keypressCooldown >= this.KEYPRESS_INTERRUPT) {
-      if (button === 2) {
+      if (button === 8) {
         if (this._context.isPaused) {
           this._context.start();
           this._keypressCooldown = 0;
@@ -60,10 +60,29 @@ export class Gamepad {
         }
       }
 
-      if (button === 3) {
-        clearInterval(this._gamepadInterval);
+      if (button === 9) {
         this._context.clear();
         this._context.start();
+        this._keypressCooldown = 0;
+      }
+
+      if (button === 0) {
+        this._context.rotate();
+        this._keypressCooldown = 0;
+      }
+
+      if (button === 13) {
+        this._context.moveToDown();
+        this._keypressCooldown = 0;
+      }
+
+      if (button === 14) {
+        this._context.moveToLeft();
+        this._keypressCooldown = 0;
+      }
+
+      if (button === 15) {
+        this._context.moveToRight();
         this._keypressCooldown = 0;
       }
     }
