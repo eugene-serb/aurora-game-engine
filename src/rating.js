@@ -8,12 +8,14 @@ export class Rating {
   }
 
   get value() {
+    this.#getLocalStorage();
+
     return this._value;
   }
 
   add(score, time) {
-    if (!score && typeof score !== 'number') return;
-    if (!time && typeof time !== 'string') return;
+    if (!score || typeof score !== 'number') return;
+    if (!time || typeof time !== 'string') return;
 
     const record = { date: Date.now(), score, time };
 
@@ -29,7 +31,8 @@ export class Rating {
 
   #sort() {
     this._value.sort(function (a, b) {
-      return a.score - b.score;
+      if (a.score < b.score) return 1;
+      if (a.score > b.score) return -1;
     });
   }
 
@@ -41,6 +44,8 @@ export class Rating {
     (localStorage[this._key])
       ? this._value = JSON.parse(localStorage[this._key])
       : this._value = [];
+
+    this.#sort();
   }
 }
 

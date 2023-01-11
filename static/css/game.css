@@ -49,6 +49,25 @@
   align-items: end;
 }
 
+.game__rating {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+  .game__rating > h3 {
+    font-size: 16px;
+  }
+
+.game__rating-item {
+  padding: 8px;
+  border: 2px solid var(--color-c-monocromatic-d);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
 @media only screen and (min-width: 720px) {
   .game {
     display: grid;
@@ -64,6 +83,11 @@
   .game__right-column {
     grid-column: 2 / 4;
     grid-row: 1 / 2;
+  }
+
+  .game__left-column {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
   }
 }
 
@@ -81,6 +105,11 @@
 
   .game__right-column {
     grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .game__left-column {
+    grid-column: 1 / 2;
     grid-row: 1 / 2;
   }
 }
