@@ -9,7 +9,6 @@ export class Rating {
 
   get value() {
     this.#getLocalStorage();
-
     return this._value;
   }
 

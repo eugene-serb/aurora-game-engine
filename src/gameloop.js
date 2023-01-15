@@ -20,8 +20,8 @@ export class Gameloop {
   }
 
   setGameOver() {
-    this.stop();
     this.isGameOver = true;
+    this.stop();
   }
 
   clear() {
