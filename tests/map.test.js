@@ -9,13 +9,13 @@ describe('[Class][Map] constructor', () => {
     [0, 0, 0],
   ];
 
-  test('Construct without params', () => {
-    const map = new Map();
+  test('Construct with matrix in params', () => {
+    const map = new Map(null, null, 0, matrix);
 
     expect(map)
       .not.toBeNull();
-    expect(map.matrix)
-      .toEqual([[0]]);
+    expect(map.value)
+      .toEqual(matrix);
     expect(map.transferX)
       .toBe(false);
     expect(map.transferY)
@@ -23,11 +23,11 @@ describe('[Class][Map] constructor', () => {
   });
 
   test('Construct with matrix and transfers', () => {
-    const map = new Map(matrix, { x: true, y: true });
+    const map = new Map(null, null, 0, matrix, { x: true, y: true });
 
     expect(map)
       .not.toBeNull();
-    expect(map.matrix)
+    expect(map.value)
       .toEqual(matrix);
     expect(map.transferX)
       .toBe(true);
@@ -47,7 +47,7 @@ describe('[Class][Map] function getCoords', () => {
   const trasferXY = { x: true, y: true };
 
   test('Move x++ and y++ at center with trasferNo', () => {
-    const map = new Map(matrix, trasferNo);
+    const map = new Map(null, null, 0, matrix, trasferNo);
 
     const start = { x: 1, y: 1 };
     const delta = { x: 1, y: 1 };
@@ -60,7 +60,7 @@ describe('[Class][Map] function getCoords', () => {
   });
 
   test('Move x++ and y++ at top border with trasferNo', () => {
-    const map = new Map(matrix, trasferNo);
+    const map = new Map(null, null, 0, matrix, trasferNo);
 
     const start = { x: 2, y: 2 };
     const delta = { x: 1, y: 1 };
@@ -73,7 +73,7 @@ describe('[Class][Map] function getCoords', () => {
   });
 
   test('Move x++ and y++ at bottom border with trasferNo', () => {
-    const map = new Map(matrix, trasferNo);
+    const map = new Map(null, null, 0, matrix, trasferNo);
 
     const start = { x: 0, y: 0 };
     const delta = { x: -1, y: -1 };
@@ -86,7 +86,7 @@ describe('[Class][Map] function getCoords', () => {
   });
 
   test('Move x++ and y++ at top border with trasferXY', () => {
-    const map = new Map(matrix, trasferXY);
+    const map = new Map(null, null, 0, matrix, trasferXY);
 
     const start = { x: 2, y: 2 };
     const delta = { x: 1, y: 1 };
@@ -99,7 +99,7 @@ describe('[Class][Map] function getCoords', () => {
   });
 
   test('Move x++ and y++ at bottom border with trasferXY', () => {
-    const map = new Map(matrix, trasferXY);
+    const map = new Map(null, null, 0, matrix, trasferXY);
 
     const start = { x: 0, y: 0 };
     const delta = { x: -1, y: -1 };

@@ -1,9 +1,11 @@
 ﻿'use strict';
 
-export class Map {
-  constructor(matrix, transfer) {
-    this.matrix = (matrix && Array.isArray(matrix))
-      ? matrix : [[0]];
+import Matrix from './matrix.js';
+
+export class Map extends Matrix {
+  constructor(width, height, emptyValue, matrix, transfer) {
+    super(width, height, emptyValue, matrix);
+
     this.transferX = (typeof transfer?.x === 'boolean')
       ? transfer.x : false;
     this.transferY = (typeof transfer?.y === 'boolean')
@@ -35,10 +37,10 @@ export class Map {
   #getX(x) {
     let result = null;
 
-    if (x >= this.matrix.length) {
-      result = (this.transferX) ? 0 : this.matrix.length - 1;
+    if (x >= this.value.length) {
+      result = (this.transferX) ? 0 : this.value.length - 1;
     } else if (x < 0) {
-      result = (this.transferX) ? this.matrix.length - 1 : 0;
+      result = (this.transferX) ? this.value.length - 1 : 0;
     } else {
       result = x;
     }
@@ -49,10 +51,10 @@ export class Map {
   #getY(x, y) {
     let result = null;
 
-    if (y >= this.matrix[x].length) {
-      result = (this.transferY) ? 0 : this.matrix[x].length - 1 ;
+    if (y >= this.value[x].length) {
+      result = (this.transferY) ? 0 : this.value[x].length - 1 ;
     } else if (y < 0) {
-      result = (this.transferY) ? this.matrix[x].length - 1 : 0;
+      result = (this.transferY) ? this.value[x].length - 1 : 0;
     } else {
       result = y;
     }
