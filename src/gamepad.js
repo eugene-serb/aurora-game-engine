@@ -12,7 +12,7 @@ export class Gamepad {
     }
 
     this.LISTENER_INTERRUPT = 10;
-    this.KEYPRESS_INTERRUPT = 250;
+    this.KEYPRESS_INTERRUPT = 500;
 
     this._gamepadInterval = null;
     this._keypressCooldown = 0;
@@ -49,6 +49,26 @@ export class Gamepad {
   }
 
   #handle(button) {
+    if (button === 0) {
+      this._context.moveToUp();
+      this._keypressCooldown = 0;
+    }
+
+    if (button === 13) {
+      this._context.moveToDown();
+      this._keypressCooldown = 0;
+    }
+
+    if (button === 14) {
+      this._context.moveToLeft();
+      this._keypressCooldown = 0;
+    }
+
+    if (button === 15) {
+      this._context.moveToRight();
+      this._keypressCooldown = 0;
+    }
+
     if (this._keypressCooldown >= this.KEYPRESS_INTERRUPT) {
       if (button === 8) {
         if (this._context.isPaused) {
@@ -63,26 +83,6 @@ export class Gamepad {
       if (button === 9) {
         this._context.clear();
         this._context.start();
-        this._keypressCooldown = 0;
-      }
-
-      if (button === 0) {
-        this._context.rotate();
-        this._keypressCooldown = 0;
-      }
-
-      if (button === 13) {
-        this._context.moveToDown();
-        this._keypressCooldown = 0;
-      }
-
-      if (button === 14) {
-        this._context.moveToLeft();
-        this._keypressCooldown = 0;
-      }
-
-      if (button === 15) {
-        this._context.moveToRight();
         this._keypressCooldown = 0;
       }
     }
