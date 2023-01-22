@@ -15,7 +15,7 @@ module.exports = (env, argv) => {
       index: './index.js',
     },
     output: {
-      filename: '[name].js',
+      filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, 'docs'),
     },
     resolve: {
