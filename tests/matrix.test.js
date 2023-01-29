@@ -2,39 +2,65 @@
 
 import Matrix from '../src/matrix.js';
 
+const matrix = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0],
+];
+
 describe('[Class][Matrix] constructor', () => {
   test('Construct without params', () => {
-    expect(new Matrix().value)
+    const instance = new Matrix();
+
+    expect(instance)
+      .not.toBeNull();
+    expect(instance.value)
       .toEqual([[0]]);
-    expect(new Matrix().EMPTY_VALUE)
+    expect(instance.EMPTY_VALUE)
       .toBe(0);
   });
 
   test('Construct with params w, h, e', () => {
-    expect(new Matrix(2, 2, 0).value)
+    const instance = new Matrix(2, 2, 0);
+
+    expect(instance)
+      .not.toBeNull();
+    expect(instance.value)
       .toEqual([[0, 0], [0, 0]]);
-    expect(new Matrix(2, 2, 0).EMPTY_VALUE)
+    expect(instance.EMPTY_VALUE)
       .toBe(0);
   });
 
   test('Construct with negative params w, h and null e', () => {
-    expect(new Matrix(-2, -2, null).value)
+    const instance = new Matrix(-2, -2, null);
+
+    expect(instance)
+      .not.toBeNull();
+    expect(instance.value)
       .toEqual([[null, null], [null, null]]);
-    expect(new Matrix(-2, -2, null).EMPTY_VALUE)
+    expect(instance.EMPTY_VALUE)
       .toBe(null);
   });
 
   test('Construct with floats', () => {
-    expect(new Matrix(-1.2, -1.4, -1.3).value)
+    const instance = new Matrix(-1.2, -1.4, -1.3);
+
+    expect(instance)
+      .not.toBeNull();
+    expect(instance.value)
       .toEqual([[-1.3]]);
-    expect(new Matrix(-1.2, -1.4, -1.3).EMPTY_VALUE)
+    expect(instance.EMPTY_VALUE)
       .toBe(-1.3);
   });
 
   test('Construct with matrix', () => {
-    expect(new Matrix(null, null, 0, [[1, 1], [1, 1]]).value)
-      .toEqual([[1, 1], [1, 1]]);
-    expect(new Matrix(null, null, 0, [[1, 1], [1, 1]]).EMPTY_VALUE)
+    const instance = new Matrix(null, null, 0, matrix);
+
+    expect(instance)
+      .not.toBeNull();
+    expect(instance.value)
+      .toEqual(matrix);
+    expect(instance.EMPTY_VALUE)
       .toBe(0);
   });
 });
@@ -65,40 +91,55 @@ describe('[Class][Matrix] function generate', () => {
 
 describe('[Class][Matrix] function clone', () => {
   test('Clone matrix generated without params', () => {
-    expect(new Matrix().clone().value)
+    const instance = new Matrix();
+    const clone = instance.clone();
+
+    expect(clone.value)
       .toEqual([[0]]);
-    expect(new Matrix().clone().EMPTY_VALUE)
+    expect(clone.EMPTY_VALUE)
       .toBe(0);
   });
 
   test('Clone matrix generated with params w, h, e', () => {
-    expect(new Matrix(2, 2, 0).clone().value)
+    const instance = new Matrix(2, 2, 0);
+    const clone = instance.clone();
+
+    expect(clone.value)
       .toEqual([[0, 0], [0, 0]]);
-    expect(new Matrix(2, 2, 0).clone().EMPTY_VALUE)
+    expect(clone.EMPTY_VALUE)
       .toBe(0);
   });
 
   test('Clone matrix generated with params e, m', () => {
-    expect(new Matrix(null, null, 0, [[0, 0], [0, 0]]).clone().value)
-      .toEqual([[0, 0], [0, 0]]);
-    expect(new Matrix(null, null, 0, [[0, 0], [0, 0]]).clone().EMPTY_VALUE)
+    const instance = new Matrix(null, null, 0, matrix);
+    const clone = instance.clone();
+
+    expect(clone.value)
+      .toEqual(matrix);
+    expect(clone.EMPTY_VALUE)
       .toBe(0);
   });
 });
 
 describe('[Class][Matrix] function copy', () => {
   test('Copy matrix generated without params', () => {
-    expect(new Matrix().copy())
+    const instance = new Matrix();
+
+    expect(instance.copy())
       .toEqual([[0]]);
   });
 
   test('Copy matrix generated with params w, h, e', () => {
-    expect(new Matrix(2, 2, 0).copy())
+    const instance = new Matrix(2, 2, 0);
+
+    expect(instance.copy())
       .toEqual([[0, 0], [0, 0]]);
   });
 
   test('Copy matrix generated with params e, m', () => {
-    expect(new Matrix(null, null, 0, [[0, 0], [0, 0]]).copy())
+    const instance = new Matrix(null, null, 0, [[0, 0], [0, 0]]);
+
+    expect(instance.copy())
       .toEqual([[0, 0], [0, 0]]);
   });
 });
@@ -116,10 +157,10 @@ describe('[Class][Matrix] function crop', () => {
   ];
 
   test('Rotate matrix to right', () => {
-    const matrix = new Matrix(null, null, 0, before);
-    matrix.crop({ x: 0, y: 0 }, { x: 2, y: 2 });
+    const instance = new Matrix(null, null, 0, before);
+    instance.crop({ x: 0, y: 0 }, { x: 2, y: 2 });
 
-    expect(matrix.value)
+    expect(instance.value)
       .toEqual(after);
   });
 });
@@ -143,10 +184,10 @@ describe('[Class][Matrix] function insert', () => {
   ];
 
   test('Insert figure to matrix at x = 0, y = 0', () => {
-    const matrix = new Matrix(null, null, 0, before);
-    matrix.insert(figure, { x: 0, y: 0 });
+    const instance = new Matrix(null, null, 0, before);
+    instance.insert(figure, { x: 0, y: 0 });
 
-    expect(matrix.value)
+    expect(instance.value)
       .toEqual(after);
   });
 });
@@ -165,10 +206,10 @@ describe('[Class][Matrix] function reflectX', () => {
   ];
 
   test('Reflect matrix', () => {
-    const matrix = new Matrix(null, null, 0, before);
-    matrix.reflectX();
+    const instance = new Matrix(null, null, 0, before);
+    instance.reflectX();
 
-    expect(matrix.value)
+    expect(instance.value)
       .toEqual(after);
   });
 });
@@ -187,10 +228,10 @@ describe('[Class][Matrix] function reflectY', () => {
   ];
 
   test('Reflect matrix', () => {
-    const matrix = new Matrix(null, null, 0, before);
-    matrix.reflectY();
+    const instance = new Matrix(null, null, 0, before);
+    instance.reflectY();
 
-    expect(matrix.value)
+    expect(instance.value)
       .toEqual(after);
   });
 });
@@ -209,10 +250,10 @@ describe('[Class][Matrix] function rotateLeft', () => {
   ];
 
   test('Rotate matrix to left', () => {
-    const matrix = new Matrix(null, null, 0, before);
-    matrix.rotateLeft();
+    const instance = new Matrix(null, null, 0, before);
+    instance.rotateLeft();
 
-    expect(matrix.value)
+    expect(instance.value)
       .toEqual(after);
   });
 });
@@ -231,10 +272,10 @@ describe('[Class][Matrix] function rotateRight', () => {
   ];
 
   test('Rotate matrix to right', () => {
-    const matrix = new Matrix(null, null, 0, before);
-    matrix.rotateRight();
+    const instance = new Matrix(null, null, 0, before);
+    instance.rotateRight();
 
-    expect(matrix.value)
+    expect(instance.value)
       .toEqual(after);
   });
 });
