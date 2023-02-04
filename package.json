@@ -1,9 +1,11 @@
 {
-  "name": "game-engine",
-  "version": "0.19.3",
-  "description": "Game engine for creating 1D and 2D games in JavaScript",
+  "name": "aurora-game-engine",
+  "version": "0.19.4",
+  "description": "Aurora game engine for creating 1D and 2D games in JavaScript",
   "keywords": [
-    "game-engine"
+    "game-engine",
+    "aurora-game-engine",
+    "javascript-game-engine"
   ],
   "license": "GNU GPL v3",
   "author": {
@@ -11,13 +13,13 @@
     "email": "eugene.serb@gmail.com",
     "url": "https://eugene-serb.github.io/"
   },
-  "homepage": "https://github.com/eugene-serb/game-engine#readme",
+  "homepage": "https://github.com/eugene-serb/aurora-game-engine#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/eugene-serb/game-engine.git"
+    "url": "git+https://github.com/eugene-serb/aurora-game-engine.git"
   },
   "bugs": {
-    "url": "https://github.com/eugene-serb/game-engine/issues"
+    "url": "https://github.com/eugene-serb/aurora-game-engine/issues"
   },
   "private": true,
   "main": "index.js",
