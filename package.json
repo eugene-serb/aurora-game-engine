@@ -1,6 +1,6 @@
 {
   "name": "aurora-game-engine",
-  "version": "0.19.4",
+  "version": "0.19.5",
   "description": "Aurora game engine for creating 1D and 2D games in JavaScript",
   "keywords": [
     "game-engine",
