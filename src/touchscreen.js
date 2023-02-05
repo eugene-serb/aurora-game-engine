@@ -27,13 +27,13 @@ export class Touchscreen {
       const absY = Math.abs(y) > Math.abs(x);
 
       if (x > 0 && absX) {
-        this._context.moveToLeft();
-      } else if (x < 0 && absX) {
-        this._context.moveToUp();
-      } else if (y > 0 && absY) {
         this._context.moveToRight();
-      } else if (y < 0 && absY) {
+      } else if (x < 0 && absX) {
+        this._context.moveToLeft();
+      } else if (y > 0 && absY) {
         this._context.moveToDown();
+      } else if (y < 0 && absY) {
+        this._context.moveToUp();
       }
     });
   }
