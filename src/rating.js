@@ -1,4 +1,4 @@
-'use strict';
+﻿'use strict';
 
 export class Rating {
   constructor(key) {
