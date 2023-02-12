@@ -7,10 +7,17 @@
   gap: 48px;
 }
 
+.game__right-column,
+.game__left-column {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
 .game__map-wrapper {
   margin: 0 auto;
-  width: 350px;
-  height: 700px;
+  width: 200px;
+  height: 200px;
   background-color: var(--color-d);
 }
 
@@ -21,7 +28,7 @@
 }
 
 .game__title {
-  font-size: 48px;
+  font-size: 32px;
 }
 
 .game__dialog {
@@ -68,7 +75,32 @@
   font-size: 12px;
 }
 
-@media only screen and (min-width: 720px) {
+@media only screen and (min-width: 340px) {
+  .game__map-wrapper {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media only screen and (min-width: 440px) {
+  .game__map-wrapper {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .game__map-wrapper {
+    width: 500px;
+    height: 500px;
+  }
+
+  .game__title {
+    font-size: 48px;
+  }
+}
+
+@media only screen and (min-width: 880px) {
   .game {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -91,7 +123,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1400px) {
   .game {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
