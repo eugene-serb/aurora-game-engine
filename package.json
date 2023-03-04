@@ -1,6 +1,6 @@
 {
   "name": "aurora-game-engine",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Aurora game engine for creating 1D and 2D games in JavaScript",
   "keywords": [
     "game-engine",
@@ -38,7 +38,7 @@
     "babel-loader": "^9.1.2",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^11.0.0",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "eslint-cli": "^1.1.1",
     "eslint-webpack-plugin": "^4.0.0",
     "html-webpack-plugin": "^5.5.0",
