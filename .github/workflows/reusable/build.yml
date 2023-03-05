@@ -1,0 +1,28 @@
+﻿name: Build
+
+on:
+  workflow_call:
+    inputs:
+      os:
+        type: string
+        required: true
+        description: operating system
+      node-version:
+        type: string
+        required: true
+        description: node.js version
+
+jobs:
+  build:
+
+    runs-on: ${{ inputs.os }}
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ inputs.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: 'npm'
+    - run: npm install
+    - run: npm run build

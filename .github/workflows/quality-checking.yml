@@ -1,0 +1,37 @@
+﻿name: Lint & Test & Build
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches: 
+      - main
+      - development
+  push:
+    branches:
+      - main
+
+env:
+  node-version: 18.x
+  os: ubuntu-latest
+
+jobs:
+  lint:
+    name: Lint
+    uses: ./.github/workflows/reusable/lint.yml
+    with:
+      os: ${{ env.os }}
+      node-version: ${{ env.node-version }}
+
+  test:
+    name: Test
+    uses: ./.github/workflows/reusable/test.yml
+    with:
+      os: ${{ env.os }}
+      node-version: ${{ env.node-version }}
+
+  build:
+    name: Build
+    uses: ./.github/workflows/reusable/build.yml
+    with:
+      os: ${{ env.os }}
+      node-version: ${{ env.node-version }}
