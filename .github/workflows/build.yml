@@ -2,9 +2,13 @@
 
 on:
   push:
-    branches: [ 'main' ]
+    branches:
+      - main
   pull_request:
-    branches: [ 'main' ]
+    branches:
+      - main
+      - development
+  workflow_dispatch:
 
 jobs:
   build:
@@ -25,3 +29,4 @@ jobs:
         cache: 'npm'
     - run: npm install
     - run: npm run build
+  
