@@ -11,27 +11,27 @@ on:
       - main
 
 env:
-  node-version: 18.x
-  os: ubuntu-latest
+  NODE_VERSION: 18.x
+  OS: ubuntu-latest
 
 jobs:
   lint:
     name: Lint
     uses: ./.github/workflows/lint.yml
     with:
-      os: ${{ env.os }}
-      node-version: ${{ env.node-version }}
+      os: $OS
+      node-version: $NODE_VERSION
 
   test:
     name: Test
     uses: ./.github/workflows/test.yml
     with:
-      os: ${{ env.os }}
-      node-version: ${{ env.node-version }}
+      os: $OS
+      node-version: $NODE_VERSION
 
   build:
     name: Build
     uses: ./.github/workflows/build.yml
     with:
-      os: ${{ env.os }}
-      node-version: ${{ env.node-version }}
+      os: $OS
+      node-version: $NODE_VERSION
