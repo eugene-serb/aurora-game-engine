@@ -18,6 +18,14 @@ module.exports = (env, argv) => {
       filename: '[name].[contenthash].js',
       path: path.resolve(__dirname, 'docs'),
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
+      minimize: true,
+      innerGraph: true,
+      usedExports: true, 
+    },
     resolve: {
       extensions: ['.js', '.mjs', '.jsx', '.json'],
       alias: {
@@ -36,13 +44,16 @@ module.exports = (env, argv) => {
         ],
       }),
       new HTMLWebpackPlugin({
+        inject: true,
         template: './index.html',
+        filename: 'index.html',
+        chunks: ['index'],
       }),
     ],
     module: {
       rules: [
         {
-          test: /\.m?jsx?$/,
+          test: /\.m?jsx?$/i,
           exclude: /node_modules/,
           use: {
             loader: 'babel-loader',
