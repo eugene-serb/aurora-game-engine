@@ -32,6 +32,14 @@ module.exports = (env, argv) => {
         '@': path.resolve(__dirname, 'src'),
       },
     },
+    devServer: {
+      watchFiles: path.join(__dirname, 'src'),
+      static: {
+        directory: path.join(__dirname, 'static'),
+      },
+      compress: true,
+      port: 9000,
+    },
     plugins: [
       new ESLintWebpackPlugin(),
       new CleanWebpackPlugin(),
