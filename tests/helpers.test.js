@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-import { getRandomInteger } from '../src/helpers.js';
+import { getRandomInteger } from '@/helpers.js';
 
 describe('[Helpers] function getRandomInteger', () => {
   test('Call without params', () => {

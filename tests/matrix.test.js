@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-import Matrix from '../src/matrix.js';
+import Matrix from '@/matrix.js';
 
 const matrix = [
   [0, 0, 0],
