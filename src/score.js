@@ -2,7 +2,7 @@
 
 export class Score {
   constructor(value) {
-    this._value = (value && typeof value === 'number') ? value : 0;
+    this._value = value && typeof value === 'number' ? value : 0;
   }
 
   get value() {
@@ -18,11 +18,11 @@ export class Score {
   }
 
   increase(value) {
-    this._value += (value && typeof value === 'number') ? value : 1;
+    this._value += value && typeof value === 'number' ? value : 1;
   }
 
   decrease(value) {
-    this._value -= (value && typeof value === 'number') ? value : 1;
+    this._value -= value && typeof value === 'number' ? value : 1;
   }
 
   reset() {
