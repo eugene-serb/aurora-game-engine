@@ -6,8 +6,8 @@
   singleQuote: true,
   quoteProps: 'as-needed',
   trailingComma: 'all',
+  arrowParens: 'always',
   bracketSameLine: false,
   bracketSpacing: true,
   htmlWhitespaceSensitivity: 'strict',
-  arrowParens: 'always',
 };
