@@ -40,9 +40,9 @@ export class Rating {
   }
 
   #getLocalStorage() {
-    (localStorage[this._key])
-      ? this._value = JSON.parse(localStorage[this._key])
-      : this._value = [];
+    localStorage[this._key]
+      ? (this._value = JSON.parse(localStorage[this._key]))
+      : (this._value = []);
 
     this.#sort();
   }

@@ -11,9 +11,7 @@ module.exports = {
     browser: true,
     node: true,
   },
-  extends: [
-    'eslint:recommended',
-  ],
+  extends: ['eslint:recommended'],
   rules: {
     'no-unused-vars': 'warn',
   },

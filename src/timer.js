@@ -30,11 +30,11 @@ export class Timer {
 
     if (seconds >= 60) {
       minutes = Math.floor(seconds / 60);
-      seconds = seconds - (minutes * 60);
+      seconds = seconds - minutes * 60;
     }
 
-    minutes = (minutes < 10) ? `0${minutes}` : `${minutes}`;
-    seconds = (seconds < 10) ? `0${seconds}` : `${seconds}`;
+    minutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
+    seconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
 
     this._value = `${minutes}:${seconds}`;
   }

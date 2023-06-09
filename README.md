@@ -1,18 +1,23 @@
-# Aurora Game Engine
-Game engine for creating 1D and 2D games in JavaScript
+ï»¿# Aurora Game Engine
 
-Stack: JavaScript, HTML, CSS, Node.js, Webpack, Babel, Jest, ESLint, npm
+Game engine for creating 1D and 2D games in JavaScript.
+
+Stack: JavaScript, HTML, CSS, Node.js, Webpack, Babel, Jest, ESLint, Prettier, npm
 
 Based on:
+
 - [Tetris](https://eugene-serb.github.io/tetris/)
 - [Snake Game](https://eugene-serb.github.io/snake-game/)
 - [2048 Game](https://eugene-serb.github.io/2048-game/)
 - [Game of Life](https://eugene-serb.github.io/game-of-life/)
 
 Commands:
-- npm run start — run with watcher
-- npm run serve — run dev server
-- npm run build — build in production mode,
-- npm run build:dev — build in development mode,
-- npm run lint — run lint,
-- npm run test — run tests
+
+- npm run start â€” run with watcher
+- npm run serve â€” run dev server
+- npm run build â€” build in production mode,
+- npm run build:dev â€” build in development mode,
+- npm run lint â€” run lint,
+- npm run format â€” run prettier check,
+- npm run format:fix â€” run prettier fix,
+- npm run test â€” run tests

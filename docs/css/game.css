@@ -62,9 +62,9 @@
   gap: 16px;
 }
 
-  .game__rating > h3 {
-    font-size: 16px;
-  }
+.game__rating > h3 {
+  font-size: 16px;
+}
 
 .game__rating-item {
   padding: 8px;
