@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-import Drawer from '../src/drawer.js';
+import Drawer from '@/drawer.js';
 
 describe('[Class][Drawer] constructor', () => {
   test('Construct without params', () => {

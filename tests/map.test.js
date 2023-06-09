@@ -1,6 +1,6 @@
 ﻿'use strict';
 
-import Map from '../src/map.js';
+import Map from '@/map.js';
 
 const matrix = [
   [0, 0, 0],
