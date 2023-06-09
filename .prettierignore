@@ -1,7 +1,9 @@
 ﻿# Ignore artifacts:
 
-node_modules
-.git
-.github
+**/.git
+**/.svn
+**/.hg
+**/node_modules
 .vs
+.github
 docs
