@@ -1,6 +1,6 @@
 {
   "name": "aurora-game-engine",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Aurora game engine for creating 1D and 2D games in JavaScript",
   "keywords": [
     "game-engine",
@@ -29,6 +29,7 @@
     "build": "webpack --mode production",
     "build:dev": "webpack --mode development",
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "format": "npx prettier src --check",
     "format:fix": "npx prettier src --write --ignore-unknown",
     "test": "jest tests"
