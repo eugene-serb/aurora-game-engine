@@ -32,7 +32,8 @@ Game engine for creating 1D and 2D games in JavaScript.
 - npm run serve — run dev server
 - npm run build — build in production mode,
 - npm run build:dev — build in development mode,
-- npm run lint — run lint,
+- npm run lint — run lint check,
+- npm run lint:fix — run lint fix,
 - npm run format — run prettier check,
 - npm run format:fix — run prettier fix,
 - npm run test — run tests
