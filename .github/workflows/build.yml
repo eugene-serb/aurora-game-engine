@@ -3,11 +3,11 @@
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
-      - development
+      - master
+      - dev
   workflow_dispatch:
 
 jobs:
@@ -15,8 +15,8 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 18.x ]
-        os: [ ubuntu-latest ]
+        node-version: [ 18 ]
+        os: [ ubuntu-22.04 ]
 
     runs-on: ${{ matrix.os }}
 
