@@ -1,6 +1,12 @@
 ﻿'use strict';
 
+/** Class Drawer for painting on canvas. */
 export class Drawer {
+  /**
+   * Create Drawer class instance.
+   * @param {HTMLElement} container HTML container for HTML Canvas.
+   * @param {Array<Array<object<{exist: boolean, color: {light: string, dark: string}}>>>} matrix Matrix representing the map.
+   */
   constructor(container, matrix) {
     if (!container || !matrix) {
       this.error = 'Error on construct';
@@ -12,6 +18,7 @@ export class Drawer {
     this.#init();
   }
 
+  /** Draw matrix on canvas. */
   draw() {
     if (!this.$container || !this.matrix) return this.error;
 
@@ -30,6 +37,10 @@ export class Drawer {
     }
   }
 
+  /**
+   * Initialize Drawer class instance.
+   * @private
+   */
   #init() {
     this.$container.innerHTML = '';
 
@@ -40,18 +51,19 @@ export class Drawer {
 
     this.#updateSizes();
 
-    window.addEventListener('resize', () => {
-      this.#updateSizes();
-    });
+    window.addEventListener('resize', () => this.#updateSizes());
 
     this.media = window.matchMedia('(prefers-color-scheme: dark)');
+
     this.#updateColours(this.media);
 
-    this.media.addEventListener('change', () => {
-      this.#updateColours(this.media);
-    });
+    this.media.addEventListener('change', () => this.#updateColours(this.media));
   }
 
+  /**
+   * Update sizes of the canvas.
+   * @private
+   */
   #updateSizes() {
     const width = this.matrix.length;
     const height = this.matrix[0].length;
@@ -69,6 +81,11 @@ export class Drawer {
     this.draw();
   }
 
+  /**
+   * Update sizes of the canvas.
+   * @param {MediaQueryList} media
+   * @private
+   */
   #updateColours(media) {
     if (media.matches) {
       this.theme = 'dark';
