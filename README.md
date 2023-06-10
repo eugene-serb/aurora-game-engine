@@ -2,6 +2,13 @@
 
 Game engine for creating 1D and 2D games in JavaScript.
 
+Based on game engines from these games and using them for implementation and testing:
+
+- [Tetris](https://eugene-serb.github.io/tetris/)
+- [2048 Game](https://eugene-serb.github.io/2048-game/)
+- [Snake Game](https://eugene-serb.github.io/snake-game/)
+- [Game of Life](https://eugene-serb.github.io/game-of-life/)
+
 ## Stack:
 
 ![](https://img.shields.io/badge/HTML-informational?style=flat-square&logo=html5&logoColor=FFFFFF&color=E44D26)
@@ -18,13 +25,6 @@ Game engine for creating 1D and 2D games in JavaScript.
 ![](https://img.shields.io/badge/npm-informational?style=flat-square&logo=npm&logoColor=FFFFFF&color=CB0000)
 ![](https://img.shields.io/badge/GitHub-informational?style=flat-square&logo=github&logoColor=FFFFFF&color=24292F)
 ![](https://img.shields.io/badge/GitHub%20Actions-informational?style=flat-square&logo=github&logoColor=FFFFFF&color=24292F)
-
-## Based on:
-
-- [Tetris](https://eugene-serb.github.io/tetris/)
-- [Snake Game](https://eugene-serb.github.io/snake-game/)
-- [2048 Game](https://eugene-serb.github.io/2048-game/)
-- [Game of Life](https://eugene-serb.github.io/game-of-life/)
 
 ## Commands:
 
