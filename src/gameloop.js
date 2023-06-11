@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Gameloop to represent game event loop. */
 export class Gameloop {

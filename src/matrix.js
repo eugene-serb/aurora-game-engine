@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Matrix for representing matrix */
 export class Matrix {

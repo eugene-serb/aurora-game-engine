@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Rating for rating. */
 export class Rating {

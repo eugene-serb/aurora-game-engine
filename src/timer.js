@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Timer for counting time from the beginning of the measurement. */
 export class Timer {

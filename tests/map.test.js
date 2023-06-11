@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 import Map from '@/map.js';
 

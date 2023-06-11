@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Gamepad for handle gamepad controls. */
 export class Gamepad {

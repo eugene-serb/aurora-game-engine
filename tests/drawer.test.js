@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 import Drawer from '@/drawer.js';
 

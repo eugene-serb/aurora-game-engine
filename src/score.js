@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Score for scoring. */
 export class Score {

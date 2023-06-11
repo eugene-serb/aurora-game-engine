@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Keyboard for handle keyboard controls. */
 export class Keyboard {

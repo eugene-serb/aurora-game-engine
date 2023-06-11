@@ -1,4 +1,4 @@
-﻿# Aurora Game Engine
+# Aurora Game Engine
 
 Game engine for creating 1D and 2D games in JavaScript.
 
@@ -24,6 +24,7 @@ Based on game engines from these games and using them for implementation and tes
 ![](https://img.shields.io/badge/Jest-informational?style=flat-square&logo=jest&logoColor=FFFFFF&color=15C213)
 ![](https://img.shields.io/badge/📝-JSDoc-informational?style=flat-square&logo=jsdoc&logoColor=FFFFFF&color=006FBB&labelColor=006FBB)
 ![](https://img.shields.io/badge/npm-informational?style=flat-square&logo=npm&logoColor=FFFFFF&color=CB0000)
+![](https://img.shields.io/badge/Git-informational?style=flat-square&logo=git&logoColor=FFFFFF&color=BC4420)
 ![](https://img.shields.io/badge/GitHub-informational?style=flat-square&logo=github&logoColor=FFFFFF&color=24292F)
 ![](https://img.shields.io/badge/GitHub%20Actions-informational?style=flat-square&logo=github&logoColor=FFFFFF&color=24292F)
 
