@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 import Matrix from '@/matrix.js';
 

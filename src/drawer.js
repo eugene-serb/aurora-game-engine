@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Drawer for painting on canvas. */
 export class Drawer {

@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /** Class Touchscreen for handle touch controls. */
 export class Touchscreen {

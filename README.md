@@ -1,4 +1,4 @@
-﻿# Aurora Game Engine
+# Aurora Game Engine
 
 Game engine for creating 1D and 2D games in JavaScript.
 
