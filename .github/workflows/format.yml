@@ -1,4 +1,4 @@
-name: Test
+name: Format
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  format:
     strategy:
       matrix:
         node-version: [18]
