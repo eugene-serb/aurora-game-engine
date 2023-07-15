@@ -10,17 +10,6 @@ describe('[Helpers] function getRandomInteger', () => {
     expect(typeof number).toBe('number');
   });
 
-  test('Generate number with params', () => {
-    const min = 0;
-    const max = 10;
-
-    const number = getRandomInteger(min, max)
-
-    expect(typeof number).toBe('number');
-    expect(number).toBeGreaterThan(min);
-    expect(number).toBeLessThan(max);
-  });
-
   test('Generate many time number with params', () => {
     const min = 0;
     const max = 10;
