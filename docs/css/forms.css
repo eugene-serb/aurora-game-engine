@@ -50,6 +50,7 @@ option:hover {
 }
 
 input[type='range'] {
+  appearance: none;
   -webkit-appearance: none;
   width: 100%;
   margin: 8px 0;
