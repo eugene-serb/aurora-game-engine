@@ -31,7 +31,7 @@ Based on game engines from these games and using them for implementation and tes
 ## Commands:
 
 - npm run start — run with watcher
-- npm run serve — run dev server
+- npm run dev — run dev server
 - npm run build — build in production mode,
 - npm run build:dev — build in development mode,
 - npm run lint — run lint check,
