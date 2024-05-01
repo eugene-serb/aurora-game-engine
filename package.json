@@ -1,6 +1,6 @@
 {
   "name": "aurora-game-engine",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "description": "Aurora Game Engine is an open source game engine in the format of a component library for creating one-dimensional and two-dimensional games in Javascript.",
   "keywords": [
     "game-engine",
@@ -35,14 +35,14 @@
     "test": "jest tests"
   },
   "devDependencies": {
-    "@babel/core": "^7.24.3",
-    "@babel/eslint-parser": "^7.24.1",
-    "@babel/preset-env": "^7.24.3",
+    "@babel/core": "^7.24.5",
+    "@babel/eslint-parser": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
     "babel-jest": "^29.7.0",
     "babel-loader": "^9.1.3",
     "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^12.0.2",
-    "css-loader": "^6.10.0",
+    "css-loader": "^6.11.0",
     "eslint": "^8.57.0",
     "eslint-cli": "^1.1.1",
     "eslint-config-prettier": "^9.1.0",
