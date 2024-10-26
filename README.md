@@ -9,6 +9,7 @@ Based on game engines from these games and using them for implementation and tes
 - [Snake Game](https://eugene-serb.github.io/snake-game/)
 - [Game of Life](https://eugene-serb.github.io/game-of-life/)
 
+
 ## Stack:
 
 ![](https://img.shields.io/badge/HTML-informational?style=flat-square&logo=html5&logoColor=FFFFFF&color=E44D26)
@@ -28,14 +29,15 @@ Based on game engines from these games and using them for implementation and tes
 ![](https://img.shields.io/badge/GitHub-informational?style=flat-square&logo=github&logoColor=FFFFFF&color=24292F)
 ![](https://img.shields.io/badge/GitHub%20Actions-informational?style=flat-square&logo=github&logoColor=FFFFFF&color=24292F)
 
+
 ## Commands:
 
-- npm run start — run with watcher
-- npm run dev — run dev server
-- npm run build — build in production mode,
-- npm run build:dev — build in development mode,
-- npm run lint — run lint check,
-- npm run lint:fix — run lint fix,
-- npm run format — run prettier check,
-- npm run format:fix — run prettier fix,
-- npm run test — run tests
+- `npm run start` — run with watcher
+- `npm run dev` — run dev server
+- `npm run build` — run build in production mode
+- `npm run build:dev` — run build in development mode
+- `npm run lint` — run lint check
+- `npm run lint:fix` — run lint fix
+- `npm run format` — run prettier check
+- `npm run format:fix` — run prettier fix
+- `npm run test` — run tests
