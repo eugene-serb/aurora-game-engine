@@ -1,6 +1,6 @@
 {
   "name": "aurora-game-engine",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "description": "Aurora Game Engine is an open source game engine in the format of a component library for creating one-dimensional and two-dimensional games in Javascript.",
   "keywords": [
     "game-engine",
