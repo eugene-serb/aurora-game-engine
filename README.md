@@ -9,7 +9,6 @@ Based on game engines from these games and using them for implementation and tes
 - [Snake Game](https://eugene-serb.github.io/snake-game/)
 - [Game of Life](https://eugene-serb.github.io/game-of-life/)
 
-
 ## Stack:
 
 ![](https://img.shields.io/badge/HTML-informational?style=flat-square&logo=html5&logoColor=FFFFFF&color=E44D26)
@@ -28,7 +27,6 @@ Based on game engines from these games and using them for implementation and tes
 ![](https://img.shields.io/badge/Git-informational?style=flat-square&logo=git&logoColor=FFFFFF&color=BC4420)
 ![](https://img.shields.io/badge/GitHub-informational?style=flat-square&logo=github&logoColor=FFFFFF&color=24292F)
 ![](https://img.shields.io/badge/GitHub%20Actions-informational?style=flat-square&logo=github&logoColor=FFFFFF&color=24292F)
-
 
 ## Commands:
 
